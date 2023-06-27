@@ -1,0 +1,21 @@
+import {View} from 'react-native';
+import { styled } from "nativewind";
+import Text from './MyText';
+
+export const PrimaryText = styled(Text, 'font-normal text-[17px] leading-[22px] text-[#262259]');
+export const PrimaryTextLarge = styled(PrimaryText, 'text-[24px] leading-[30px]');
+export const PrimaryTextSmall = styled(PrimaryText, 'text-[13px]');
+export const SecondaryText = styled(Text, 'font-normal text-[13px] leading-[22px] color : [#fff]');
+export const SecondaryTextSmall = styled(SecondaryText, 'font-normal text-[12px]');
+export const FableCommentText = styled(SecondaryText, 'text-[17px] text-[#6D6D6D]');
+export const FableCommentLarge = styled(SecondaryText, 'text-[27px]');
+export const FableComment = styled(SecondaryText, 'text-[17px] text-[#6D6D6D]');
+export const ButtonText = styled(View, 'font-normal text-[13px] leading-[22px] text-[#fff]');
+export const FableItemText = styled(Text, 'font-normal text-[17px] leading-[22px] text-[#fff]');
+export const FableItemTextLarge = styled(FableItemText, 'text-[27px] leading-[30px]');
+export const FableItemTextSmall = styled(FableItemText, 'text-[12px]');
+export const FableTopicText = styled(FableItemText, 'text-[14px] text-[#6D6D6D]');
+export const FableTopicTextLarge = styled(FableItemText, 'text-[24px]');
+export const ShareTopicText = styled(Text, 'font-normal text-[11px] leading-[22px] flex text-[#fff] bg-[#000] rounded-[8px] border-[1px] border-[#C8C7D3] pr-[10px] pt-[20px]');
+export const ShareTopicButton = styled(View, 'font-normal text-[14px] leading-[22px] text-[#fff] bg-[#000] rounded-[60px] border-[1px] border-[#C8C7D3] pr-[10px] pt-[20px]');
+export const InputText = styled(Text, 'font-normal text-[17px] text-[#fff]');
