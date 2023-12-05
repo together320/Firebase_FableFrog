@@ -1,49 +1,41 @@
 {
   "project_info": {
-    "project_number": "106967146828",
-    "project_id": "fablefrognative-6bb4a",
-    "storage_bucket": "fablefrognative-6bb4a.appspot.com"
+    "project_number": "112397818545",
+    "project_id": "fablefrog-8e5db",
+    "storage_bucket": "fablefrog-8e5db.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:106967146828:android:20d28dcdb946ebad1e6fe9",
+        "mobilesdk_app_id": "1:112397818545:android:41b1b65ad7123d74d32090",
         "android_client_info": {
-          "package_name": "com.mars.FableFrogNative"
+          "package_name": "com.mars.FableFrog"
         }
       },
       "oauth_client": [
         {
-          "client_id": "106967146828-7gak6cfjjomj1717g1rd1sh97rm17u9m.apps.googleusercontent.com",
+          "client_id": "112397818545-005c08lvclldd8h5a8vjgbmlf7t6bak9.apps.googleusercontent.com",
           "client_type": 1,
           "android_info": {
-            "package_name": "com.mars.FableFrogNative",
-            "certificate_hash": "44d0ba2af5a483da06be958fb8d3cd6d50308eb0"
+            "package_name": "com.mars.FableFrog",
+            "certificate_hash": "e79a49f3a642213d5a96f7815ef89542abb93a60"
           }
         },
         {
-          "client_id": "106967146828-qc19fcesc162im1rr7jkkg1fob9dhetr.apps.googleusercontent.com",
-          "client_type": 1,
-          "android_info": {
-            "package_name": "com.mars.FableFrogNative",
-            "certificate_hash": "1e04268bcaf8ae6b19cffcede3d265f78ab57882"
-          }
-        },
-        {
-          "client_id": "106967146828-9r3vl5b2a5lmtes48ld8fidv3msgm31p.apps.googleusercontent.com",
+          "client_id": "112397818545-lemjfgign8ivsnm4d4o2d5vkkpq53sou.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyC6YUUjgqXLOuxawalK3RXEFRmpiZwQdck"
+          "current_key": "AIzaSyBMbmGV0sFTHBfSBh2qUR0m2PcrG4lnPcY"
         }
       ],
       "services": {
         "appinvite_service": {
           "other_platform_oauth_client": [
             {
-              "client_id": "106967146828-3c4ke5kmnj6me5g67jb8fgm4dolbc0o2.apps.googleusercontent.com",
+              "client_id": "112397818545-lemjfgign8ivsnm4d4o2d5vkkpq53sou.apps.googleusercontent.com",
               "client_type": 3
             }
           ]

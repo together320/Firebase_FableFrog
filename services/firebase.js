@@ -8,13 +8,13 @@ import { GoogleAuthProvider } from "firebase/auth";
 
 // Your web app's Firebase configuration
 export const firebaseConfig = {
- 
-  apiKey: "AIzaSyDYkZg2aEuErg8v3CHeGolhTEbLEcGD2sk",
-  authDomain: "auth.fablefrog.com",
-  projectId: "fablefrog-auth",
-  storageBucket: "fablefrog-auth.appspot.com",
-  messagingSenderId: "1021054701797",
-  appId: "1:1021054701797:web:9693e89d356112927b440c"
+  apiKey: "AIzaSyAOw9mYZzi9eJVlyNOMeK5wOpNt4z0CRuk",
+  authDomain: "fablefrog-8e5db.firebaseapp.com",
+  projectId: "fablefrog-8e5db",
+  storageBucket: "fablefrog-8e5db.appspot.com",
+  messagingSenderId: "112397818545",
+  appId: "1:112397818545:web:06c4ea109e78c967d32090",
+  measurementId: "G-BDXMCMLLJS"
   
 };
 

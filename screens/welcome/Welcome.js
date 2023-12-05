@@ -30,7 +30,7 @@ export default function WelcomeScreen(props) {
   }, []);
 
   GoogleSignin.configure({
-    webClientId: "106967146828-9r3vl5b2a5lmtes48ld8fidv3msgm31p.apps.googleusercontent.com",
+    webClientId: "112397818545-lemjfgign8ivsnm4d4o2d5vkkpq53sou.apps.googleusercontent.com",
   });
 
   async function onGoogleButtonPress() {
