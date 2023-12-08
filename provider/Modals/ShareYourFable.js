@@ -363,14 +363,14 @@ export default function ShareYourFable(props) {
         }
         if(step === 1){
             return (<>
-                <View className={`flex flex-row ${PixelRatio.get() > 2 ? "pt-[40px]" : "pt-[10px]"} pb-[10] items-center justify-center`}>
+                <View className={`flex flex-row ${PixelRatio.get() > 2 ? "pt-[20px]" : "pt-[10px]"} pb-[10] items-center justify-center`}>
                     <MaterialIcon name="mic" size={50} color={`${!IsRecording ? '#6D61FD' : '#cf222e'}`}/>
                     <Text className="ml-[20] font-normal text-[40px] text-[#262259]">{convertNumberToTime(durationMillis)}</Text>
                 </View>
                 <View className="flex flex-row items-center justify-center">
                     <MyBezierLineChart />
                 </View>
-                <View className={`flex ${PixelRatio.get() > 2 ? "pt-[30px]" : "pt-[10px]"}`}>
+                <View className={`flex ${PixelRatio.get() > 2 ? "pt-[20px]" : "pt-[10px]"}`}>
                     <TouchableOpacity className="bg-[#6D61FD] h-[50] justify-center items-center w-[50%] ml-auto" style={{ borderRadius: 8 }}
                     onPress={IsRecording ? StopRecording : StartRecording}>
                         <View className="flex-row">
@@ -474,48 +474,50 @@ export default function ShareYourFable(props) {
                     <View className="flex pt-[20] pb-[10]">
                         <PrimaryText>Topics</PrimaryText>
                     </View>
-                    <ScrollView className={`${PixelRatio.get() > 2 ? "h-[400px] max-h-[400px] min-h-[400px]" : "h-[300px] max-h-[300px] min-h-[300px]"}`}>
-                        {
-                            topic === null ? 
-                            <>
-                                <View className="flex flex-row flex-wrap">
-                                {
-                                    topics?.map((item, i) => {
-                                        return <FableShareToggle key={i}
-                                            value={item}
-                                            selected={topic === item}
-                                            onPress={() => handleTopicChange(item)}
-                                        />
-                                    })
-                                }
-                                </View>
-                            </>
-                            :
-                            <>
-                                <View className="flex flex-row flex-wrap">
-                                    <FableShareToggle
-                                        value={topic}
-                                        selected={true}
-                                        onPress={() => handleTopicChange(null)}
-                                    />
-                                </View>
-                                <View className="flex-row my-4">
-                                    <PrimaryText>Sub Topics:</PrimaryText>
-                                </View>
-                                
-                                    <View className= "flex flex-row flex-wrap">
-                                    {subTopics?.map((item, i) => {
-                                        return <FableShareToggle key={i}
-                                            value={item}
-                                            selected={subTopic.includes(item)}
-                                            onPress={() => handleSubTopicChange(item)}
-                                        />
-                                    })}
+                    <View className="h-[90%]">
+                        <ScrollView>
+                            {
+                                topic === null ? 
+                                <>
+                                    <View className="flex flex-row flex-wrap">
+                                    {
+                                        topics?.map((item, i) => {
+                                            return <FableShareToggle key={i}
+                                                value={item}
+                                                selected={topic === item}
+                                                onPress={() => handleTopicChange(item)}
+                                            />
+                                        })
+                                    }
                                     </View>
-                                
-                            </>
-                        }
-                    </ScrollView>
+                                </>
+                                :
+                                <>
+                                    <View className="flex flex-row flex-wrap">
+                                        <FableShareToggle
+                                            value={topic}
+                                            selected={true}
+                                            onPress={() => handleTopicChange(null)}
+                                        />
+                                    </View>
+                                    <View className="flex-row my-4">
+                                        <PrimaryText>Sub Topics:</PrimaryText>
+                                    </View>
+                                    
+                                        <View className= "flex flex-row flex-wrap">
+                                        {subTopics?.map((item, i) => {
+                                            return <FableShareToggle key={i}
+                                                value={item}
+                                                selected={subTopic.includes(item)}
+                                                onPress={() => handleSubTopicChange(item)}
+                                            />
+                                        })}
+                                        </View>
+                                    
+                                </>
+                            }
+                        </ScrollView>
+                    </View>
                     <View className="flex pt-[10]">
                         <TouchableOpacity className="bg-[#6D61FD] h-[50] justify-center items-center w-[50%] ml-auto" style={{ borderRadius: 8 }}
                         onPress = {handleNext}>
@@ -632,7 +634,7 @@ export default function ShareYourFable(props) {
                         </View>
                         <View className="flex-row pt-[10] pb-[10]">
                             {
-                                isUrl === false || url == "https://app.fablefrog.com/dummy_cover.png" ? "" :
+                                isUrl === false || url == "https://app.fablefrog.com/dummy_cover.png" || url != "" ? "" :
                                 <View className="flex">
                                     <View className="flex-row items-center">
                                         <MaterialIcon name="search" size={25} color="#706d8b"/>
@@ -643,15 +645,19 @@ export default function ShareYourFable(props) {
                                         placeholder="Search Image"
                                         />
                                     </View>
-                                    <View className="flex flex-row flex-wrap justify-center">
-                                        {
-                                            result.map((item, i) => {
-                                                return <TouchableOpacity key={i} className="w-[30%] m-[5]" onPress={() => {console.log(item.urls.regular);setUrl(item.urls.regular)}}>
-                                                        <Image style={{width: '100%', height: 160, borderRadius: 10, resizeMode: 'cover',justifyContent: 'center'}}
-                                                        source={{uri : item.urls.regular}}/>
-                                                    </TouchableOpacity>
-                                            })
-                                        }
+                                    <View className="h-[200px]">
+                                        <ScrollView>
+                                            <View className="flex flex-row flex-wrap justify-center">
+                                            {
+                                                result.map((item, i) => {
+                                                    return <TouchableOpacity key={i} className="w-[30%] m-[5]" onPress={() => {console.log(item.urls.regular);setUrl(item.urls.regular)}}>
+                                                            <Image style={{width: '100%', height: 160, borderRadius: 10, resizeMode: 'cover',justifyContent: 'center'}}
+                                                            source={{uri : item.urls.regular}}/>
+                                                        </TouchableOpacity>
+                                                })
+                                            }
+                                            </View>
+                                        </ScrollView>
                                     </View>
                                 </View>
                             }
@@ -694,19 +700,23 @@ export default function ShareYourFable(props) {
             <Modal.Header closeModal={handleCloseModal}/>
             <Modal.Body>
                 <View className="flex max-h-[80%]">
-                    <View className="flex-row ml-[-10px]">
-                        <FableShareButton className={`${Dimensions.get("window").width > 380 ? "px-[10px]" : ""} ${step == 0 ? 'border-[1px]' : 'border-[0px]'} ${PixelRatio.get() > 2 ? "text-[13px]" : "text-[13px]"}`} onPress={() => setStep(0)}>
-                            Title
-                        </FableShareButton>
-                        <FableShareButton className={`${Dimensions.get("window").width > 380 ? "px-[10px]" : ""} ${step == 1 || step == 2 ? 'border-[1px]' : 'border-[0px]'}`} onPress={() => setStep(1)}>
-                            Recording
-                        </FableShareButton>
-                        <FableShareButton className={`${Dimensions.get("window").width > 380 ? "px-[10px]" : ""} ${step == 3 ? 'border-[1px]' : 'border-[0px]'}`} onPress={() => setStep(3)}>
-                            Topics
-                        </FableShareButton>
-                        <FableShareButton className={`${Dimensions.get("window").width > 380 ? "px-[10px]" : ""} ${step == 4 ? 'border-[1px]' : 'border-[0px]'}`} onPress={() => setStep(4)}>
-                            Cover Photo
-                        </FableShareButton>
+                    <View className="flex-row ml-[-10px] w-[300px] overflow-x-auto">
+                        <ScrollView
+                            horizontal={true}
+                            showsHorizontalScrollIndicator={false}>
+                            <FableShareButton className={`w-[70px] h-[40px] ${Dimensions.get("window").width > 380 ? "px-[10px]" : ""} ${step == 0 ? 'border-[1px]' : 'border-[0px]'} ${PixelRatio.get() > 2 ? "text-[13px]" : "text-[13px]"}`} onPress={() => setStep(0)}>
+                                Title
+                            </FableShareButton>
+                            <FableShareButton className={`w-[70px] h-[40px] ${Dimensions.get("window").width > 380 ? "px-[10px]" : ""} ${step == 1 || step == 2 ? 'border-[1px]' : 'border-[0px]'}`} onPress={() => setStep(1)}>
+                                Recording
+                            </FableShareButton>
+                            <FableShareButton className={`w-[70px] h-[40px] ${Dimensions.get("window").width > 380 ? "px-[10px]" : ""} ${step == 3 ? 'border-[1px]' : 'border-[0px]'}`} onPress={() => setStep(3)}>
+                                Topics
+                            </FableShareButton>
+                            <FableShareButton className={`w-[100px] h-[40px] ${Dimensions.get("window").width > 380 ? "px-[10px]" : ""} ${step == 4 ? 'border-[1px]' : 'border-[0px]'}`} onPress={() => setStep(4)}>
+                                Cover&nbsp;Photo
+                            </FableShareButton>
+                        </ScrollView>
                     </View>
                     {renderByStep()}
                 </View>

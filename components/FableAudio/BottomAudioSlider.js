@@ -234,7 +234,7 @@ export default function BottomAudioSlider(props) {
                 source={{uri : props.details.photo}}
                 className="w-[80px] h-[80px] rounded-tl-[10px] bg-center bg-cover relative"
             />
-            <View className="flex pt-[10] ml-[20] mr-auto mt-[5]">
+            <View className="flex h-[80px] ml-[20] mr-auto justify-center pt-[10px]">
                 <View className="flex-row">
                     <SecondaryText className="text-[13px] text-[#706d8b]">{props.details.author}</SecondaryText>
                 </View>
@@ -246,9 +246,8 @@ export default function BottomAudioSlider(props) {
                         <InvertButton className="flex !border-none border-[0px] !px-[0px]" onPress={handleTrack}>
                             <Text className="text-[#6d61fd] !text-[17px]">Untrack</Text>
                         </InvertButton> :
-                        <TouchableOpacity className="flex-row py-[10] rounded-[8px] !border-none border-[#6d61fd]  !px-[0px]" onPress={handleTrack}>
-                            <MaterialIcon className="mr-[5]" name="add" size={18} color="#6d61fd"/>
-                            <Text className="text-[#6d61fd] !text-[17px]">Track</Text>
+                        <TouchableOpacity className="flex-row py-[10] rounded-[8px] !border-none border-[#6d61fd] !px-[0px]" onPress={handleTrack}>
+                            <Text className="text-[#6d61fd] !text-[17px]">+ Track</Text>
                         </TouchableOpacity>
                     }
                 </View>
@@ -263,7 +262,7 @@ export default function BottomAudioSlider(props) {
                 </SecondaryText>
             </View>
           </View>
-      <View className="flex flex-row px-6 pt-4">
+      <View className="flex flex-row px-6 pt-4 items-center">
           <PrimaryText className="w-[60%]">{props.details.title.length > 30 ? props.details.title.slice(0, 30) + "..." : props.details.title}</PrimaryText>
           <TouchableOpacity onPress={handleSpeed} className="rounded-[8px] px-[20] py-[10] border-[1px] !w-[40%] border-[#706d8b] bg-[#00000000] justify-center items-center">
                 <View className="flex-row">

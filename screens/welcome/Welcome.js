@@ -136,17 +136,17 @@ Alert.alert(googleCredential);
           <Text className="text-[16px] text-[#fff] pl-[10]" style={{ fontFamily: 'Nunito_400Regular' }}>Continue with Phone</Text>
         </TouchableOpacity>
         <View className="mt-[30]" />
-        <TouchableOpacity className="bg-[#fff] h-[56] justify-center border-[#000] border-[1px]" style={{ borderRadius: 8 }}
+        <TouchableOpacity className="bg-[#fff] h-[56] pl-[10] justify-center border-[#000] border-[1px]" style={{ borderRadius: 8 }}
           onPress={signin} >
           <View className="flex-row items-center">
             {(loading ?
               <ActivityIndicator
-                size='large'
+                size='small'
                 visible={loading}
                 textContent={'Loading...'}
                 textStyle={{ color: '#6d61fd' }}
               /> : "")}
-            <Text className="text-[16px] text-[#000] pl-[10]" style={{ fontFamily: 'Nunito_400Regular' }}>
+            <Text className="text-[16px] text-[#000]" style={{ fontFamily: 'Nunito_400Regular' }}>
               Continue with Google
             </Text>
           </View>

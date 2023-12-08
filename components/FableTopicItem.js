@@ -325,7 +325,7 @@ export function FableTopicItem(props) {
                 <View>
                     { renderContent() }
                 </View>
-                <View className="absolute top-[40%] right-[40px]">
+                <View className="absolute top-[40%] right-[20px]">
                     {!playing ? <PlayLogo width={60} height={60} fill="white" onPress={() => {dialogCtx.setPlaying(item, !playing);}}/> : 
                     <PauseLogo width={60} height={60} fill="white" onPress={() => {dialogCtx.setPlaying(item, !playing);}}/>}
                     {/* <AntIcon name="playcircleo" size={58} color="#fff"  onPress={() => dialogCtx.setPlaying(item, !playing)}/> */}
